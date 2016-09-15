@@ -11,8 +11,8 @@ public class Main {
 
     public static void main(String args[]) throws Exception {
 
-        boolean a = true;
-        while (a) {
+
+        while (true) {
             menu();
         }
     }
@@ -32,37 +32,25 @@ public class Main {
 
         switch (category) {
             case "1":
-//                enterQuantity();
-//                enterName();
                 newItem = new Fruit(userItem, userQuantity);
-                return newItem;
+                break;
             case "2":
-//                enterQuantity();
-//                enterName();
                 newItem = new Vegetable(userItem, userQuantity);
-                return newItem;
-
+                break;
             case "3":
-//                enterQuantity();
-//                enterName();
                 newItem = new Meat(userItem, userQuantity);
-                return newItem;
-
+                break;
             case "4":
-//                enterQuantity();
-//                enterName();
                 newItem = new Grain(userItem, userQuantity);
-                return newItem;
-            case "5":
-//                enterQuantity();
-//                enterName();
-                newItem = new Sugar(userItem, userQuantity);
-                return newItem;
+                break;
 
+            case "5":
+                newItem = new Sugar(userItem, userQuantity);
+                break;
             default:
                 throw new Exception("Invalid type.");
         }
-
+        return newItem;
 
     }
 
@@ -88,15 +76,11 @@ public class Main {
                     Main.inventoryItems.remove(listNumber - 1);
                     break;
                 case "3":
-                    InventoryItem item1 = new InventoryItem(null, 0, null);
-
                     System.out.println("Please indicate the number of the item you want to modify.");
                     int listNumber2 = Integer.valueOf(Main.scanner.nextLine());
-                    Main.inventoryItems.get(listNumber2 - 1);
+                    InventoryItem item1 = Main.inventoryItems.get(listNumber2 - 1);
                     System.out.println("Please enter the new amount.");
                     item1.quantity = Integer.valueOf(Main.scanner.nextLine());
-                    item1.name = Main.inventoryItems.get(listNumber2 - 1).getName();
-
                     Main.inventoryItems.set(listNumber2 - 1, item1);
                     break;
                 default:

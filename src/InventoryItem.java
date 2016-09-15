@@ -27,15 +27,6 @@ public class InventoryItem {
         return name;
     }
 
-//    public void enterName() {
-//        System.out.println("Please enter the name of the item");
-//        String userItem = Main.scanner.nextLine();
-//    }
-//
-//    public void enterQuantity() {
-//        System.out.println("Please enter the quantity");
-//        int userQuantity = Integer.parseInt(Main.scanner.nextLine());
-//    }
 
 
 

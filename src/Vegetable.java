@@ -5,6 +5,5 @@ public class Vegetable extends InventoryItem {
     public Vegetable(String name, int quantity) {
         super("Vegetable", quantity, name);
 
-        this.category = "Vegetable";
     }
 }
